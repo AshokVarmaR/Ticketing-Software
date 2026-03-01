@@ -57,7 +57,7 @@ public class SecurityConfig {
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
-		configuration.setAllowedOrigins(List.of("http://localhost:5173", "http://172.31.16.1:5173"));
+		configuration.setAllowedOrigins(List.of("http://ticketing-frontend-ashok.s3-website-us-east-1.amazonaws.com", "http://localhost:5173", "http://172.31.16.1:5173"));
 		configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
 		configuration.setAllowedHeaders(List.of("*"));
 		configuration.setAllowCredentials(true);
@@ -70,3 +70,4 @@ public class SecurityConfig {
 	}
 
 }
+
