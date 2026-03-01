@@ -36,21 +36,21 @@ public class EmployeeService implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		// if (employeeRepository.findByEmail("admin@gmail.com").isEmpty()) {
+		if (employeeRepository.findByEmail("admin@gmail.com").isEmpty()) {
 
-		// 	Employee admin = new Employee();
+			Employee admin = new Employee();
 
-		// 	admin.setName("Admin");
-		// 	admin.setEmail("admin@gmail.com");
-		// 	admin.setEmployeeCode("EIDC" + 1);
-		// 	admin.setRole(Role.ADMIN);
-		// 	admin.setIsActive(true);
-		// 	admin.setJoiningDate(LocalDate.now());
-		// 	admin.setPassword(passwordEncoder.encode("1234"));
-		// 	admin.setCreatedAt(LocalDateTime.now());
+			admin.setName("Admin");
+			admin.setEmail("admin@gmail.com");
+			admin.setEmployeeCode("EIDC" + 1);
+			admin.setRole(Role.ADMIN);
+			admin.setIsActive(true);
+			admin.setJoiningDate(LocalDate.now());
+			admin.setPassword(passwordEncoder.encode("1234"));
+			admin.setCreatedAt(LocalDateTime.now());
 
-		// 	employeeRepository.save(admin);
-		// }
+			employeeRepository.save(admin);
+		}
 	}
 
 	public EmployeeResponse createEmployee(EmployeeCreateRequest req) {
@@ -246,4 +246,5 @@ public class EmployeeService implements CommandLineRunner {
 
 
 }
+
 
